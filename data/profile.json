@@ -1,0 +1,149 @@
+{
+  "name": {
+    "first": "Mano",
+    "last": "Rose",
+    "full": "Mano Rose"
+  },
+  "email": "manosuppu96@gmail.com",
+  "phone": "9025935721",
+  "tagline": "Crafting cinematic stories, one frame at a time.",
+  "description": "Video Editor and Content Creator with 3+ years of experience in short-form video, cinematic edits, and social media growth strategies.",
+  "roles": {
+    "short": "Video Editor",
+    "detailed": "Video Editor | Content Creator | Social Media Strategist"
+  },
+  "location": {
+    "based": "Salem / Erode, Tamil Nadu",
+    "availability": "Salem / Erode / Remote"
+  },
+  "available": true,
+  "bio": "Results-driven Video Editor and Content Creator with 3+ years of experience in short-form video content, cinematic edits, and social media campaigns. Scaled an e-commerce brand from zero to profitable using 100% organic content. Reduced client turnaround time by 40% by integrating AI workflows. Delivered video production to 20+ regional businesses across Salem and Erode districts. Currently pursuing BCA with a focus on computer vision and machine learning.",
+  "stats": [
+    { "value": "3+", "label": "Years Experience" },
+    { "value": "20+", "label": "Clients Served" },
+    { "value": "40%", "label": "Faster Turnaround" }
+  ],
+  "skills": [
+    "CapCut",
+    "Canva",
+    "Midjourney",
+    "RunwayML",
+    "Color Grading",
+    "Cinematic Transitions",
+    "Thumbnail Design",
+    "Poster Design",
+    "Short-form Scriptwriting",
+    "Hook Writing",
+    "Content Calendars",
+    "Brand Identity",
+    "Instagram Analytics",
+    "Organic Growth",
+    "Meta Business Suite",
+    "AI Image Generation",
+    "PyTorch",
+    "TensorFlow",
+    "ONNX Runtime",
+    "Computer Vision",
+    "C++",
+    "DSA"
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "role": "Founder & Social Media Manager",
+      "company": "Rose Fish Farm",
+      "companyShort": "ROSE FISH FARM",
+      "type": "Full-time",
+      "location": "Salem District, TN",
+      "period": "2022",
+      "periodEnd": "Present",
+      "bullets": [
+        "Scaled an ornamental fish e-commerce brand from zero to profitable using 100% organic Instagram content — zero paid ads.",
+        "Grew Instagram followers from 0 to 400+ within 24 months through cinematic product videos, reels, and poster campaigns.",
+        "Created all in-house video & photo content using CapCut and Canva, maintaining 3–4 posts per week consistently.",
+        "Designed high-impact hook-driven content to drive consistent orders and repeat enquiries via Instagram DMs.",
+        "Managed full business operations including inventory, customer relations, order fulfilment, pricing, and digital storefront."
+      ],
+      "desc": "Built and scaled a profitable ornamental fish e-commerce brand on Instagram from scratch using organic cinematic content and strategic social media management.",
+      "tech": ["CapCut", "Canva", "Instagram", "Reels", "Content Strategy", "E-commerce", "Brand Building"]
+    },
+    {
+      "id": 2,
+      "role": "Freelance Video Editor & Content Strategist",
+      "company": "Self-Employed",
+      "companyShort": "FREELANCE",
+      "type": "Freelance",
+      "location": "Aandiyur & Gurureddiyur, TN",
+      "period": "2023",
+      "periodEnd": "Present",
+      "bullets": [
+        "Delivered product showcases, promotional reels, and event coverage for 20+ local shops and small businesses across Salem and Erode districts.",
+        "Integrated photorealistic AI image generation into editing workflows, reducing project turnaround time by 40%.",
+        "Wrote scripts, hook lines, and caption copy for Instagram Reels to maximize watch-time for client accounts.",
+        "Provided content calendars, brand identity guidance, and growth strategies to 10+ regional businesses, improving posting consistency.",
+        "Developed high-retention content strategies including scriptwriting, hooks, thumbnails, and Instagram analytics reporting."
+      ],
+      "desc": "Freelance video editing and content strategy for 20+ regional businesses, combining cinematic production with AI-powered workflows and data-driven Instagram growth.",
+      "tech": ["CapCut", "Canva", "Midjourney", "RunwayML", "Scriptwriting", "Instagram Analytics", "Brand Strategy", "AI Workflows"]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Rose Fish Farm",
+      "subtitle": "Organic E-commerce Brand",
+      "type": "Brand Building",
+      "link": "https://instagram.com/heyy.rose07",
+      "image": "/assets/project-artgenio1.png",
+      "tech": ["Instagram", "CapCut", "Canva", "Reels", "Organic Growth", "E-commerce"],
+      "desc": "Built a profitable ornamental fish e-commerce brand from zero using 100% organic cinematic content on Instagram — growing from 0 to 400+ followers and consistent order volume within 24 months, with zero paid advertising spend."
+    },
+    {
+      "id": 2,
+      "title": "AI-Powered Editing Pipeline",
+      "subtitle": "40% Faster Client Turnaround",
+      "type": "AI Workflow",
+      "link": "https://instagram.com/heyy.rose07",
+      "image": "/assets/project-easyfolio1.png",
+      "tech": ["Midjourney", "RunwayML", "PyTorch", "TensorFlow", "ONNX Runtime", "AI Image Generation"],
+      "desc": "Integrated photorealistic AI image generation (Midjourney, RunwayML) and computer vision tools (PyTorch, TensorFlow, ONNX) into standard post-production workflows, cutting client content turnaround time by 40% across 20+ freelance projects."
+    }
+  ],
+  "publications": [
+    {
+      "id": 1,
+      "title": "Meta Blueprint Digital Marketing Associate",
+      "platform": "Certification",
+      "year": "2025",
+      "link": "https://instagram.com/heyy.rose07",
+      "desc": "Industry certification in digital marketing fundamentals, advertising strategy, and Meta platform tools — currently in progress, expected completion 2025."
+    },
+    {
+      "id": 2,
+      "title": "Google Digital Garage",
+      "platform": "Certification",
+      "year": "2025",
+      "link": "https://instagram.com/heyy.rose07",
+      "desc": "Fundamentals of Digital Marketing certification from Google — planned completion 2025."
+    },
+    {
+      "id": 3,
+      "title": "BCA — Computer Vision & ML",
+      "platform": "Education",
+      "year": "2024–2026",
+      "link": "https://instagram.com/heyy.rose07",
+      "desc": "Bachelor of Computer Applications at The Kavery Arts & Science College, Mecheri, TN. Coursework: Computer Vision, Machine Learning, Data Structures & Algorithms, and C++."
+    },
+    {
+      "id": 4,
+      "title": "Portfolio & Showreel",
+      "platform": "Instagram",
+      "year": "2026",
+      "link": "https://instagram.com/heyy.rose07",
+      "desc": "Full video editing portfolio, cinematic reels, client work samples, and brand content — all available on Instagram."
+    }
+  ],
+  "socials": [
+    { "label": "Instagram", "href": "https://instagram.com/heyy.rose07" }
+  ]
+}
