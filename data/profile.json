@@ -95,7 +95,7 @@
       "subtitle": "Organic E-commerce Brand",
       "type": "Brand Building",
       "link": "https://instagram.com/heyy.rose07",
-      "image": "/assets/project-artgenio1.png",
+      "image": "/assets/project-rosefish.png",
       "tech": ["Instagram", "CapCut", "Canva", "Reels", "Organic Growth", "E-commerce"],
       "desc": "Built a profitable ornamental fish e-commerce brand from zero using 100% organic cinematic content on Instagram — growing from 0 to 400+ followers and consistent order volume within 24 months, with zero paid advertising spend."
     },
@@ -105,7 +105,7 @@
       "subtitle": "40% Faster Client Turnaround",
       "type": "AI Workflow",
       "link": "https://instagram.com/heyy.rose07",
-      "image": "/assets/project-easyfolio1.png",
+      "image": "/assets/project-aiedit.png",
       "tech": ["Midjourney", "RunwayML", "PyTorch", "TensorFlow", "ONNX Runtime", "AI Image Generation"],
       "desc": "Integrated photorealistic AI image generation (Midjourney, RunwayML) and computer vision tools (PyTorch, TensorFlow, ONNX) into standard post-production workflows, cutting client content turnaround time by 40% across 20+ freelance projects."
     }
