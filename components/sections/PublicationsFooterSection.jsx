@@ -1,7 +1,7 @@
 
 'use client'
 
-import { useEffect, useRef, Fragment } from 'react'
+import { useEffect, useRef, Fragment, useState } from 'react'
 import Image from 'next/image'
 import * as THREE from 'three'
 import { gsap } from '@/lib/gsap'
