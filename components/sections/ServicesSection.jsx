@@ -69,7 +69,15 @@ export default function ServicesSection() {
             <div className={styles.content}>
               <h3 className={styles.serviceTitle}>{service.title}</h3>
               <p className={styles.serviceSubtitle}>{service.subtitle}</p>
-              <p className={styles.serviceDesc}>{service.desc}</p>
+              {Array.isArray(service.desc) ? (
+                <ul className={styles.serviceDescList}>
+                  {service.desc.map((point, i) => (
+                    <li key={i} className={styles.serviceBullet}>{point}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className={styles.serviceDesc}>{service.desc}</p>
+              )}
             </div>
           </div>
         ))}

@@ -45,7 +45,8 @@
     "ONNX Runtime",
     "Computer Vision",
     "C++",
-    "DSA"
+    "DSA",
+    "Vibe Coder"
   ],
   "experience": [
     {
@@ -164,6 +165,17 @@
       "subtitle": "Tailored to Your Brand",
       "desc": "Beautiful, highly responsive, and high-converting custom websites and landing pages designed specifically for your brand identity and business goals.",
       "image": "/assets/service-custom.png"
+    },
+    {
+      "id": 4,
+      "title": "Vibe Coder",
+      "subtitle": "Crafting Digital Experiences",
+      "desc": [
+        "Building highly aesthetic and immersive digital interfaces.",
+        "Writing clean, efficient code that feels like poetry.",
+        "Blending deep logic with creative intuition to craft digital vibes."
+      ],
+      "image": "/assets/service-vibe.png"
     }
   ],
   "socials": [

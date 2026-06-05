@@ -123,7 +123,8 @@
   margin: 0;
 }
 
-.serviceDesc {
+.serviceDesc,
+.serviceDescList {
   font-size: var(--text-body);
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.6;
@@ -131,10 +132,21 @@
   margin-top: 0.5rem;
   opacity: 0;
   transform: translateY(10px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: all 0.4s ease;
+  transition-delay: 0.1s;
 }
 
-.card:hover .serviceDesc {
+.serviceDescList {
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+.serviceBullet {
+  margin-bottom: 0.2rem;
+}
+
+.card:hover .serviceDesc,
+.card:hover .serviceDescList {
   opacity: 1;
   transform: translateY(0);
 }
@@ -163,7 +175,8 @@
     transform: translateY(0);
   }
 
-  .serviceDesc {
+  .serviceDesc,
+  .serviceDescList {
     opacity: 1;
     transform: translateY(0);
     display: -webkit-box;
