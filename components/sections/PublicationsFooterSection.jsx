@@ -6,7 +6,7 @@ import Image from 'next/image'
 import * as THREE from 'three'
 import { gsap } from '@/lib/gsap'
 import {
-  FaGithub, FaLinkedinIn, FaMedium, FaInstagram, FaYoutube, FaEnvelope,
+  FaGithub, FaLinkedinIn, FaMedium, FaInstagram, FaYoutube, FaEnvelope, FaWhatsapp,
 } from 'react-icons/fa'
 import { FiArrowUpRight, FiChevronDown } from 'react-icons/fi'
 import profile from '@/data/profile.json'
@@ -18,6 +18,7 @@ import { BASE_PATH } from '@/lib/siteConfig'
 const BASE  = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
 const SOCIAL_ICONS = {
+  WhatsApp:  <FaWhatsapp  size={13} />,
   GitHub:    <FaGithub    size={13} />,
   LinkedIn:  <FaLinkedinIn  size={13} />,
   Medium:    <FaMedium    size={13} />,
@@ -26,11 +27,12 @@ const SOCIAL_ICONS = {
 }
 
 const MOBILE_SOCIAL_ICONS = {
+  WhatsApp:  <FaWhatsapp  size={20} />,
   GitHub:    <FaGithub    size={20} />,
   LinkedIn:  <FaLinkedinIn  size={20} />,
   Instagram: <FaInstagram size={20} />,
 }
-const HERO_SOCIAL_LABELS = ['GitHub', 'LinkedIn', 'Instagram']
+const HERO_SOCIAL_LABELS = ['WhatsApp', 'GitHub', 'LinkedIn', 'Instagram']
 
 const VID_VERT = `
   varying vec2 vUv;

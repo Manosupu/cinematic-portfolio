@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { gsap } from '@/lib/gsap'
-import { FaGithub, FaLinkedinIn, FaMedium, FaInstagram, FaYoutube } from 'react-icons/fa'
+import { FaGithub, FaLinkedinIn, FaMedium, FaInstagram, FaYoutube, FaWhatsapp } from 'react-icons/fa'
 import profile from '@/data/profile.json'
 import { BASE_PATH } from '@/lib/siteConfig'
 import styles from '@/styles/sections/AboutSection.module.css'
@@ -11,7 +11,7 @@ import styles from '@/styles/sections/AboutSection.module.css'
 const BIO      = profile.bio
 const WHO_ITEMS = profile.skills
 
-const ICON_MAP = { GitHub: FaGithub, LinkedIn: FaLinkedinIn, Medium: FaMedium, Instagram: FaInstagram, YouTube: FaYoutube }
+const ICON_MAP = { GitHub: FaGithub, LinkedIn: FaLinkedinIn, Medium: FaMedium, Instagram: FaInstagram, YouTube: FaYoutube, WhatsApp: FaWhatsapp }
 
 const SOCIALS = profile.socials.map(s => ({ Icon: ICON_MAP[s.label], href: s.href, label: s.label }))
 
