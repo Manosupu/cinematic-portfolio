@@ -9,6 +9,7 @@ import { gsap } from '@/lib/gsap'
 
 import profile from '@/data/profile.json'
 import content from '@/data/content.json'
+import { BASE_PATH } from '@/lib/siteConfig'
 import styles from '@/styles/sections/HeroSection.module.css'
 
 const HeroBackground = dynamic(() => import('@/components/three/HeroBackground'), { ssr: false })
@@ -99,7 +100,7 @@ export default function HeroSection() {
       {/* Photo */}
       <div ref={photoRef} className={styles.photo}>
         <Image
-          src="/assets/hero1.jpg" alt={profile.name.full}
+          src={`${BASE_PATH}/assets/hero1.jpg`} alt={profile.name.full}
           fill priority quality={100} unoptimized
           sizes="(min-width: 768px) 55vw, 100vw"
           className={styles.photoImg}

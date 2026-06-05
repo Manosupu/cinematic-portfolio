@@ -14,6 +14,7 @@ import content from '@/data/content.json'
 import styles from '@/styles/sections/PublicationsFooterSection.module.css'
 
 const PUBS = profile.publications
+import { BASE_PATH } from '@/lib/siteConfig'
 const BASE  = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
 const SOCIAL_ICONS = {
@@ -335,7 +336,7 @@ export default function PublicationsFooterSection() {
         {/* ── Mobile background image (footer phase - mobile only) ── */}
         <div className={styles.mobileFooterBg}>
           <Image
-            src="/assets/mobile-footer.webp"
+            src={`${BASE_PATH}/assets/mobile-footer.webp`}
             alt=""
             fill
             quality={100}
@@ -352,7 +353,7 @@ export default function PublicationsFooterSection() {
         {/* ── Floating image: starts left, moves to center ── */}
         <div ref={imageWrapRef} className={styles.imageWrap}>
           <Image
-            src="/assets/jyoti-footer.jpeg"
+            src={`${BASE_PATH}/assets/jyoti-footer.jpeg`}
             alt=""
             fill
             quality={100}

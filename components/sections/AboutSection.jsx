@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { gsap } from '@/lib/gsap'
 import { FaGithub, FaLinkedinIn, FaMedium, FaInstagram, FaYoutube } from 'react-icons/fa'
 import profile from '@/data/profile.json'
+import { BASE_PATH } from '@/lib/siteConfig'
 import styles from '@/styles/sections/AboutSection.module.css'
 
 const BIO      = profile.bio
@@ -87,7 +88,7 @@ export default function AboutSection() {
         <div className={styles.photoWrap}>
           <div className={styles.photoFrame} data-about-photo>
             <Image
-              src="/assets/jyoti-about.png"
+              src={`${BASE_PATH}/assets/jyoti-about.png`}
               alt={profile.name.full}
               fill
               quality={100}
