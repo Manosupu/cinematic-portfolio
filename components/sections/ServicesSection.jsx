@@ -18,20 +18,23 @@ export default function ServicesSection() {
     if (!section || SERVICES.length === 0) return
 
     // Simple entrance animation
-    gsap.fromTo(cardsRef.current, 
+    const tl = gsap.timeline({ paused: true })
+    tl.fromTo(cardsRef.current, 
       { y: 50, opacity: 0 }, 
-      { 
-        y: 0, 
-        opacity: 1, 
-        duration: 0.8, 
-        stagger: 0.15, 
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 60%',
-        }
-      }
+      { y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power3.out' }
     )
+
+    const observer = new IntersectionObserver(
+      ([e]) => { 
+        if (e.isIntersecting) { 
+          tl.play()
+          observer.disconnect()
+        } 
+      },
+      { threshold: 0.2 }
+    )
+    observer.observe(section)
+    return () => { observer.disconnect(); tl.kill() }
   }, [])
 
   if (SERVICES.length === 0) return null
