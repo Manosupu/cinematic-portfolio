@@ -18,19 +18,19 @@ import { BASE_PATH } from '@/lib/siteConfig'
 const BASE  = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
 const SOCIAL_ICONS = {
-  WhatsApp:  <FaWhatsapp  size={13} />,
-  GitHub:    <FaGithub    size={13} />,
-  LinkedIn:  <FaLinkedinIn  size={13} />,
-  Medium:    <FaMedium    size={13} />,
-  Instagram: <FaInstagram size={13} />,
-  YouTube:   <FaYoutube   size={13} />,
-}
-
-const MOBILE_SOCIAL_ICONS = {
   WhatsApp:  <FaWhatsapp  size={20} />,
   GitHub:    <FaGithub    size={20} />,
   LinkedIn:  <FaLinkedinIn  size={20} />,
+  Medium:    <FaMedium    size={20} />,
   Instagram: <FaInstagram size={20} />,
+  YouTube:   <FaYoutube   size={20} />,
+}
+
+const MOBILE_SOCIAL_ICONS = {
+  WhatsApp:  <FaWhatsapp  size={28} />,
+  GitHub:    <FaGithub    size={28} />,
+  LinkedIn:  <FaLinkedinIn  size={28} />,
+  Instagram: <FaInstagram size={28} />,
 }
 const HERO_SOCIAL_LABELS = ['WhatsApp', 'GitHub', 'LinkedIn', 'Instagram']
 
