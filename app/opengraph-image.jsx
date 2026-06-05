@@ -2,7 +2,7 @@ import { SITE_URL } from '@/lib/siteConfig'
 import { ImageResponse } from 'next/og'
 import profile from '@/data/profile.json'
 
-export const runtime = 'edge'
+export const dynamic = 'force-static'
 
 export const alt = `${profile.name.full} | ${profile.roles.short}`
 
