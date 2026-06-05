@@ -260,6 +260,30 @@
   border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: 1rem;
   padding: 1rem 1.2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.availBgWrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.availBgImg {
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.availBgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.95) 100%);
+}
+
+.availContent {
+  position: relative;
+  z-index: 1;
 }
 
 .taglineText {

@@ -190,12 +190,25 @@ export default function HeroSection() {
 
         {profile.available && (
           <div ref={availCardRef} className={styles.availCard}>
-            <div className={styles.availHeader}>
-              <span className={styles.availDot} />
-              <span className={styles.availStatus}>{content.hero.availableLabel}</span>
+            <div className={styles.availBgWrap}>
+              <Image 
+                src={`${BASE_PATH}/assets/location-map.png`} 
+                alt="Location Map" 
+                fill 
+                quality={80} 
+                className={styles.availBgImg} 
+                unoptimized
+              />
+              <div className={styles.availBgOverlay} />
             </div>
-            <p className={styles.locationLine}>Based in {profile.location.based}</p>
-            <p className={styles.locationLine}>Available {profile.location.availability}</p>
+            <div className={styles.availContent}>
+              <div className={styles.availHeader}>
+                <span className={styles.availDot} />
+                <span className={styles.availStatus}>{content.hero.availableLabel}</span>
+              </div>
+              <p className={styles.locationLine}>Based in {profile.location.based}</p>
+              <p className={styles.locationLine}>Available {profile.location.availability}</p>
+            </div>
           </div>
         )}
       </div>
