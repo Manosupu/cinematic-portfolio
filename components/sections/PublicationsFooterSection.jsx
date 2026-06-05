@@ -72,13 +72,6 @@ const VID_FRAG = `
   }
 `
 
-function getGreeting() {
-  const h = new Date().getHours()
-  if (h < 12) return 'Good morning'
-  if (h < 17) return 'Good afternoon'
-  return 'Good evening'
-}
-
 function easeInOut(t) {
   return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t
 }
@@ -114,6 +107,16 @@ export default function PublicationsFooterSection() {
   const rightRef        = useRef(null)
   const bigNameRef      = useRef(null)
   const bottomBarRef    = useRef(null)
+
+  const [greeting, setGreeting] = useState('Hello')
+
+  useEffect(() => {
+    const h = new Date().getHours()
+    if (h < 12) setGreeting('Good morning')
+    else if (h < 17) setGreeting('Good afternoon')
+    else if (h < 21) setGreeting('Good evening')
+    else setGreeting('Good night')
+  }, [])
 
   useEffect(() => {
     const wrapper       = wrapperRef.current
@@ -495,7 +498,7 @@ export default function PublicationsFooterSection() {
               <div className={styles.identityBlock}>
                 <p className={styles.greetLine}>
                   <span className={styles.greetDot} />
-                  {getGreeting()}
+                  {greeting}
                 </p>
                 <p className={styles.roleLabel}>{profile.roles.short}</p>
                 <h2 className={styles.nameHeading}>
