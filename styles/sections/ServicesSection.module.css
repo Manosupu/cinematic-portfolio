@@ -52,7 +52,6 @@
   flex-direction: column;
   justify-content: flex-end;
   padding: clamp(2rem, 4vh, 3rem) clamp(1.5rem, 3vw, 2.5rem);
-  group: hover;
 }
 
 .card:last-child {
