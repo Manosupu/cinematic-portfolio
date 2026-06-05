@@ -252,12 +252,18 @@
   gap: 0.9rem;
 }
 
-.taglineCard,
-.availCard {
+.taglineCard {
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 1rem;
+  padding: 1rem 1.2rem;
+}
+
+.availCard {
+  background: #111; /* Fallback */
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 1rem;
   padding: 1rem 1.2rem;
   position: relative;
@@ -272,13 +278,13 @@
 
 .availBgImg {
   object-fit: cover;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .availBgOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.95) 100%);
+  background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%);
 }
 
 .availContent {
@@ -325,13 +331,13 @@
   font-family: var(--font-baloo), sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
-  color: var(--text-dark);
+  color: #fff;
 }
 
 .locationLine {
   font-size: 0.66rem;
   font-weight: 600;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.85);
   letter-spacing: 0.03em;
   line-height: 1.7;
 }
