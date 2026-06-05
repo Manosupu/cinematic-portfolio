@@ -6,7 +6,7 @@
   },
   "email": "manosuppu96@gmail.com",
   "phone": "9025935721",
-  "tagline": "Crafting cinematic stories, one frame at a time.",
+  "tagline": "Crafting Cinematic stories, one frame at a time.",
   "description": "Video Editor and Content Creator with 3+ years of experience in short-form video, cinematic edits, and social media growth strategies.",
   "roles": {
     "short": "Video Editor",
@@ -144,6 +144,8 @@
     }
   ],
   "socials": [
-    { "label": "Instagram", "href": "https://instagram.com/heyy.rose07" }
+    { "label": "Instagram", "href": "https://instagram.com/heyy.rose07" },
+    { "label": "GitHub",    "href": "https://github.com/" },
+    { "label": "LinkedIn",  "href": "https://linkedin.com/in/" }
   ]
 }

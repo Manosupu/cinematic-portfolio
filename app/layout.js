@@ -3,6 +3,7 @@ import "./globals.css";
 import Cursor from "@/components/ui/Cursor";
 import { SITE_URL } from '@/lib/siteConfig';
 import { Analytics } from "@vercel/analytics/next";
+import profile from '@/data/profile.json';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,49 +27,49 @@ const dancing = Dancing_Script({
   weight: ["400", "700"],
 });
 
-const description =
-  'Control-M SME and production support specialist with 15+ years across enterprise workload automation, ITSM, RPA, and AI-assisted operations.';
+const description = profile.description;
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Jyoti Sinha | Software Engineer',
-    template: '%s | Jyoti Sinha',
+    default: `${profile.name.full} | ${profile.roles.short}`,
+    template: `%s | ${profile.name.full}`,
   },
   description,
   keywords: [
-    'Jyoti Sinha',
-    'Control-M SME',
-    'Control-M Administrator',
-    'Production Support',
-    'Application L3 Support',
-    'Agentic AI Automation',
-    'Batch Scheduling',
-    'ITIL',
-    'UiPath RPA',
-    'Singapore',
+    profile.name.full,
+    'Video Editor',
+    'Content Creator',
+    'Social Media Strategist',
+    'Cinematic Reels',
+    'Short-form Video',
+    'AI Video Editing',
+    'CapCut',
+    'Canva',
+    'Salem',
+    'Tamil Nadu',
   ],
-  authors: [{ name: 'Jyoti Sinha', url: SITE_URL }],
-  creator: 'Jyoti Sinha',
+  authors: [{ name: profile.name.full, url: SITE_URL }],
+  creator: profile.name.full,
   openGraph: {
     type: 'website',
-    locale: 'en_SG',
+    locale: 'en_IN',
     url: SITE_URL,
-    siteName: 'Jyoti Sinha',
-    title: 'Jyoti Sinha | Control-M SME',
+    siteName: profile.name.full,
+    title: `${profile.name.full} | ${profile.roles.short}`,
     description,
     images: [
       {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'Jyoti Sinha | Control-M SME Portfolio',
+        alt: `${profile.name.full} | ${profile.roles.short} Portfolio`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jyoti Sinha | Control-M SME',
+    title: `${profile.name.full} | ${profile.roles.short}`,
     description,
     images: ['/opengraph-image'],
   },
@@ -117,14 +118,11 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Person',
-              name: 'Jyoti Sinha',
+              name: profile.name.full,
               url: SITE_URL,
-              email: 'jyotisinha0526@gmail.com',
-              jobTitle: 'Control-M SME',
-              sameAs: [
-                'https://ctm-log-analyzer.netlify.app/',
-                'https://www.linkedin.com/feed/update/urn:li:activity:7453443679396003840/',
-              ],
+              email: profile.email,
+              jobTitle: profile.roles.short,
+              sameAs: profile.socials.map(s => s.href),
             }),
           }}
         />

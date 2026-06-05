@@ -1,9 +1,10 @@
 import { SITE_URL } from '@/lib/siteConfig'
 import { ImageResponse } from 'next/og'
+import profile from '@/data/profile.json'
 
 export const runtime = 'edge'
 
-export const alt = 'Jyoti Sinha | Software Engineer'
+export const alt = `${profile.name.full} | ${profile.roles.short}`
 
 export const size = {
   width: 1200,
@@ -13,7 +14,7 @@ export const size = {
 export const contentType = 'image/png'
 
 const ACCENT = '#f7931e'
-const photoUrl = `${SITE_URL}/assets/jyoti-about.jpeg`
+const photoUrl = `${SITE_URL}/assets/hero1.jpg`
 
 export default function Image() {
   return new ImageResponse(
@@ -80,7 +81,7 @@ export default function Image() {
                 textTransform: 'uppercase',
               }}
             >
-              CONTROL-M SME
+              {profile.roles.short.toUpperCase()}
             </span>
           </div>
 
@@ -100,7 +101,7 @@ export default function Image() {
                 letterSpacing: -4,
               }}
             >
-              JYOTI
+              {profile.name.first.toUpperCase()}
             </span>
 
             <span
@@ -111,7 +112,7 @@ export default function Image() {
                 letterSpacing: -4,
               }}
             >
-              SINHA
+              {profile.name.last.toUpperCase()}
             </span>
           </div>
 
@@ -125,8 +126,7 @@ export default function Image() {
               marginBottom: 34,
             }}
           >
-            Enterprise workload automation, production support, and
-            AI-assisted operations for critical systems.
+            {profile.description}
           </div>
 
           {/* TAGS */}
@@ -139,10 +139,10 @@ export default function Image() {
             }}
           >
             {[
-              'Control-M',
-              'L3 Support',
-              'Automation',
-              'Agentic AI',
+              'Video Editor',
+              'Content Creator',
+              'AI Workflows',
+              'Cinematic Reels',
             ].map((tag) => (
               <div
                 key={tag}
@@ -168,11 +168,7 @@ export default function Image() {
               gap: 32,
             }}
           >
-            {[
-              ['15+', 'Years'],
-              ['8+', 'Roles'],
-              ['CTM + AI', 'Specialist'],
-            ].map(([value, label]) => (
+            {profile.stats.map(({ value, label }) => (
               <div
                 key={label}
                 style={{
@@ -222,7 +218,7 @@ export default function Image() {
             src={photoUrl}
             width={420}
             height={630}
-            alt="Jyoti Sinha"
+            alt={profile.name.full}
             style={{
               objectFit: 'cover',
             }}
@@ -250,7 +246,7 @@ export default function Image() {
             letterSpacing: 2,
           }}
         >
-          jyoti-sinha-portfolio.vercel.app
+          {SITE_URL.replace('https://', '')}
         </div>
       </div>
     ),
