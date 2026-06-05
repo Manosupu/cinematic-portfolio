@@ -167,7 +167,7 @@ export default function Home() {
       />
 
       <Navbar />
-      <main ref={mainRef} style={{ height: '100vh', overflowY: 'scroll', overscrollBehavior: 'none' }}>
+      <main ref={mainRef} style={{ height: '100svh', overflowY: 'scroll', overscrollBehavior: 'none' }}>
         <div>
           <VideoIntro />
           <HeroSection />

@@ -109,7 +109,7 @@ export default function ProjectsSection() {
   }, [])
 
   return (
-    <div style={{ height: `${PROJECTS.length * 100}vh` }}>
+    <div style={{ height: `${PROJECTS.length * 100}svh` }}>
       <section ref={sectionRef} className={styles.section}>
 
         {/* Top bar */}

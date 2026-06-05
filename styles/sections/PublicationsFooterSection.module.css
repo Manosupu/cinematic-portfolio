@@ -1,6 +1,6 @@
-/* ── Outer wrapper (300vh - three scroll steps) ───────── */
+/* ── Outer wrapper (300svh - three scroll steps) ───────── */
 .wrapper {
-  height: 300vh;
+  height: 300svh;
   position: relative;
   z-index: 6;
 }
@@ -11,11 +11,11 @@
   }
 }
 
-/* ── Sticky inner (100vh viewport-locked) ─────────────── */
+/* ── Sticky inner (100svh viewport-locked) ─────────────── */
 .sticky {
   position: sticky;
   top: 0;
-  height: 100vh;
+  height: 100svh;
   overflow: hidden;
   background: #080808;
   display: flex;
