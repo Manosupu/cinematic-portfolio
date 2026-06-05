@@ -100,7 +100,7 @@ export default function HeroSection() {
       {/* Photo */}
       <div ref={photoRef} className={styles.photo}>
         <Image
-          src={`${BASE_PATH}/assets/hero1.jpg`} alt={profile.name.full}
+          src={`${BASE_PATH}/assets/profile-new.jpg`} alt={profile.name.full}
           fill priority quality={100} unoptimized
           sizes="(min-width: 768px) 55vw, 100vw"
           className={styles.photoImg}
