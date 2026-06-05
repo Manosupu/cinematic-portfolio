@@ -143,6 +143,29 @@
       "desc": "Full video editing portfolio, cinematic reels, client work samples, and brand content — all available on Instagram."
     }
   ],
+  "services": [
+    {
+      "id": 1,
+      "title": "AI Automation",
+      "subtitle": "Streamline Your Workflow",
+      "desc": "Automate repetitive tasks, integrate smart AI workflows into your business processes, and reduce manual effort using cutting-edge AI technologies and machine learning.",
+      "image": "/assets/service-ai.png"
+    },
+    {
+      "id": 2,
+      "title": "Full-Stack Web Development",
+      "subtitle": "Robust & Scalable",
+      "desc": "End-to-end web application development using modern frameworks like React, Next.js, and Node.js. Building secure, fast, and scalable architectures for your ideas.",
+      "image": "/assets/service-web.png"
+    },
+    {
+      "id": 3,
+      "title": "Custom Websites",
+      "subtitle": "Tailored to Your Brand",
+      "desc": "Beautiful, highly responsive, and high-converting custom websites and landing pages designed specifically for your brand identity and business goals.",
+      "image": "/assets/service-custom.png"
+    }
+  ],
   "socials": [
     { "label": "Instagram", "href": "https://instagram.com/heyy.rose07" },
     { "label": "GitHub",    "href": "https://github.com/" },
