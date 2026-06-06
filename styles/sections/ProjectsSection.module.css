@@ -269,6 +269,17 @@
 
 /* ── Mobile ──────────────────────────────────── */
 @media (max-width: 767px) {
+  .section {
+    /* Prevent any overflowing children from causing horizontal scroll */
+    overflow-x: hidden;
+  }
+
+  /* Reduce the huge top padding so the section label isn't buried below navbar */
+  .topBar {
+    padding-top: 3.5rem;
+    padding-bottom: 0;
+  }
+
   .slideContent {
     grid-template-columns: 1fr;
     align-items: flex-end;
@@ -276,7 +287,8 @@
   }
 
   .slideRight { display: none; }
-  .title      { font-size: 1.8rem; }
+  /* Tighter clamp: 1.5rem floor avoids tiny text, 8vw scales to content */
+  .title      { font-size: clamp(1.5rem, 8vw, 2rem); }
   .slideNum   { font-size: 5rem; bottom: 5rem; }
 }
 

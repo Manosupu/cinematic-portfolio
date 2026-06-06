@@ -91,6 +91,12 @@
   pointer-events: none;
 }
 
+/* On the dark VideoIntro the default navbar text (#1a0800) makes the
+   hamburger invisible — force white so it's always visible on dark bgs */
+.introMode .hamburger {
+  color: rgba(255, 255, 255, 0.85);
+}
+
 @media (max-width: 767px) {
   .header { padding: 0.75rem 1rem; }
   .time   { display: none; }
@@ -117,7 +123,8 @@
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.97);
-  z-index: 50;
+  /* Must be above header (z-index: 100) so the overlay covers the navbar bar */
+  z-index: 200;
   display: flex;
   flex-direction: column;
   align-items: center;

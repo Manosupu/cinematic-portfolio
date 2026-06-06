@@ -264,6 +264,11 @@
 
 /* ── Mobile (≤767px) ────────────────────────────── */
 @media (max-width: 767px) {
+  .section {
+    /* Prevent any overflowing child from causing horizontal scroll */
+    overflow-x: hidden;
+  }
+
   .header {
     padding: 3.5rem clamp(1rem, 4vw, 1.5rem) 0;
   }
@@ -273,8 +278,9 @@
     padding-top: 1.2rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    overflow-y: auto;
-    overflow-x: hidden;
+    /* Changed from overflow-y: auto to avoid a nested scroll trap inside
+       the GSAP-controlled main scroll container. Content is fully visible. */
+    overflow: visible;
   }
 
   .snakeLine { display: none; }

@@ -11,6 +11,8 @@
     var(--hero-end) 100%
   );
   overflow: hidden;
+  /* Prevent any absolutely positioned child from causing horizontal scroll */
+  overflow-x: hidden;
 }
 
 /* ─── Photo ─────────────────────────────────────────────── */
@@ -383,6 +385,12 @@
 @media (max-width: 374px) {
   .photo   { width: 75%; height: 65svh; }
   .content { top: 4.5rem; max-width: 60vw; }
+}
+
+/* ─── Responsive: Small phone gap 375–479px ────────────────── */
+@media (min-width: 375px) and (max-width: 479px) {
+  .name    { white-space: normal; }
+  .content { max-width: 57vw; }
 }
 
 /* ─── Responsive: Tablet 768–1023px ─────────────────────── */

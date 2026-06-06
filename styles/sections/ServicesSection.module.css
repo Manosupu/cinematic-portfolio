@@ -106,7 +106,9 @@
 }
 
 .serviceTitle {
-  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+  /* clamp: 1.4rem floor ensures readable size even on smallest phones;
+     on mobile 5.5vw ≈ 21px at 375px; on desktop 2.5vw controls scale */
+  font-size: clamp(1.4rem, 5.5vw, 2.2rem);
   font-weight: 900;
   color: #fff;
   line-height: 1.1;

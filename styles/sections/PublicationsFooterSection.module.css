@@ -757,11 +757,16 @@
   50%       { opacity: 1;    transform: scaleY(1.15); }
 }
 
-/* ── Mobile ───────────────────────────────────────────── */
+/* ── Mobile ───────────────────────────────────────────────────── */
 @media (max-width: 767px) {
   .glCanvas  { display: none; }
   .imageWrap { display: none; }
-  .sticky { height: 100svh; min-height: -webkit-fill-available; }
+  .sticky {
+    height: 100svh;
+    min-height: -webkit-fill-available;
+    /* Safety: prevent horizontal scroll from any absolutely positioned child */
+    overflow-x: hidden;
+  }
 
   /* pubContent has no background - mobileDarkOverlay provides uniform darkness beneath all sections */
 
@@ -827,7 +832,8 @@
     justify-content: flex-end;
     flex: 1;
     gap: 1rem;
-    padding: 0 1.5rem 5.5rem;
+    /* Respect the home indicator on iPhone X+ using the CSS env() safe area */
+    padding: 0 1.5rem max(5.5rem, calc(4rem + env(safe-area-inset-bottom, 0px)));
   }
   .mobileBrand {
     display: flex;
