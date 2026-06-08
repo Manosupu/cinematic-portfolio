@@ -36,7 +36,7 @@ export default function ProjectsSection() {
 
     const tl = gsap.timeline({ paused: true })
 
-    // Horizontal slide - xPercent is viewport-independent
+    // Horizontal slide — viewport-independent
     tl.to(track, {
       xPercent: -((n - 1) / n * 100),
       ease: 'none',
@@ -48,23 +48,25 @@ export default function ProjectsSection() {
       const next   = contentRefs.current[i + 1]
       const nextBg = bgRefs.current[i + 1]
 
+      // ⚡ Faster exit
       if (curr) {
         tl.to(curr, {
-          opacity: 0, y: -40, filter: 'blur(6px)',
-          duration: 0.2, ease: 'power2.in',
-        }, i + 0.30)
+          opacity: 0, y: -40, filter: 'blur(4px)',
+          duration: 0.12, ease: 'power2.in',
+        }, i + 0.25)
       }
 
+      // ⚡ Faster background scale
       if (nextBg) {
         tl.fromTo(nextBg,
           { scale: 1.04 },
-          { scale: 1.0, duration: 1.0, ease: 'power2.out' },
+          { scale: 1.0, duration: 0.6, ease: 'power2.out' },
           i
         )
       }
 
       if (next) {
-        tl.set(next, { opacity: 1, y: 0 }, i + 0.44)
+        tl.set(next, { opacity: 1, y: 0 }, i + 0.36)
 
         const meta  = next.querySelector(`.${styles.meta}`)
         const title = next.querySelector(`.${styles.title}`)
@@ -73,14 +75,15 @@ export default function ProjectsSection() {
         const tags  = next.querySelectorAll(`.${styles.tag}`)
         const btn   = next.querySelector(`.${styles.liveBtn}`)
 
-        if (meta)  tl.fromTo(meta,  { x: -10, opacity: 0 }, { x: 0, opacity: 1, duration: 0.25, ease: 'power2.out' }, i + 0.45)
-        if (title) tl.fromTo(title, { opacity: 0, y: 20 },  { opacity: 1, y: 0, duration: 0.45, ease: 'expo.out'   }, i + 0.48)
-        if (sub)   tl.fromTo(sub,   { y: 12, opacity: 0 },  { y: 0, opacity: 1, duration: 0.30, ease: 'power2.out' }, i + 0.54)
-        if (desc)  tl.fromTo(desc,  { y: 10, opacity: 0 },  { y: 0, opacity: 1, duration: 0.35, ease: 'power2.out' }, i + 0.58)
+        // ⚡ All entrance animations ~40% faster
+        if (meta)  tl.fromTo(meta,  { y: -10, opacity: 0 },            { y: 0, opacity: 1, duration: 0.18, ease: 'power3.out' }, i + 0.37)
+        if (title) tl.fromTo(title, { opacity: 0, y: 24, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.28, ease: 'power3.out' }, i + 0.40)
+        if (sub)   tl.fromTo(sub,   { y: 10, opacity: 0 },              { y: 0, opacity: 1, duration: 0.20, ease: 'power2.out' }, i + 0.44)
+        if (desc)  tl.fromTo(desc,  { y: 8,  opacity: 0 },              { y: 0, opacity: 1, duration: 0.22, ease: 'power2.out' }, i + 0.46)
         if (tags.length) {
-          tl.fromTo(tags,  { y: 6, opacity: 0 },  { y: 0, opacity: 1, duration: 0.25, ease: 'power2.out', stagger: 0.03 }, i + 0.65)
+          tl.fromTo(tags, { y: 5, opacity: 0 }, { y: 0, opacity: 1, duration: 0.18, ease: 'power2.out', stagger: 0.02 }, i + 0.50)
         }
-        if (btn)   tl.fromTo(btn,   { y: 8, opacity: 0 },  { y: 0, opacity: 1, duration: 0.30, ease: 'power2.out' }, i + 0.72)
+        if (btn) tl.fromTo(btn, { y: 6, opacity: 0 }, { y: 0, opacity: 1, duration: 0.18, ease: 'power2.out' }, i + 0.54)
       }
     }
 
@@ -131,6 +134,7 @@ export default function ProjectsSection() {
           {PROJECTS.map((proj, i) => (
             <div key={proj.id} className={styles.slide}>
 
+              {/* Background image + purple overlays */}
               <div
                 ref={el => { bgRefs.current[i] = el }}
                 className={styles.slideBg}
@@ -150,37 +154,43 @@ export default function ProjectsSection() {
                 <div className={styles.slideVignette}      aria-hidden />
               </div>
 
+              {/* Decorative slide number — top right */}
               <span className={styles.slideNum} aria-hidden>0{i + 1}</span>
 
+              {/* Content — centered layout */}
               <div
                 ref={el => { contentRefs.current[i] = el }}
                 className={styles.slideContent}
               >
-                <div className={styles.slideLeft}>
+                {/* ── Centered cinematic title ── */}
+                <div className={styles.centerHero}>
                   <div className={styles.meta}>
                     <span className={styles.typeTag}>{proj.type}</span>
                   </div>
                   <h2 className={styles.title}>{proj.title}</h2>
                   <p  className={styles.subtitle}>{proj.subtitle}</p>
-                  <a
-                    href={proj.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.liveBtn}
-                  >
-                    <span>Live Demo</span>
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
-                      <path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </a>
                 </div>
 
-                <div className={styles.slideRight}>
+                {/* ── Glassmorphism info card ── */}
+                <div className={styles.infoCard}>
                   <p className={styles.desc}>{proj.desc}</p>
-                  <div className={styles.stack}>
-                    {proj.tech.map(t => (
-                      <span key={t} className={styles.tag}>{t}</span>
-                    ))}
+                  <div className={styles.infoRow}>
+                    <div className={styles.stack}>
+                      {proj.tech.map(t => (
+                        <span key={t} className={styles.tag}>{t}</span>
+                      ))}
+                    </div>
+                    <a
+                      href={proj.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.liveBtn}
+                    >
+                      <span>Live Demo</span>
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
+                        <path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -189,7 +199,7 @@ export default function ProjectsSection() {
           ))}
         </div>
 
-        {/* Progress bar */}
+        {/* Purple-gold progress bar */}
         <div className={styles.bottomUI}>
           <div className={styles.progressTrack}>
             <div ref={progressRef} className={styles.progressBar} />

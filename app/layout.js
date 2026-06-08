@@ -1,30 +1,25 @@
-import { Geist, Geist_Mono, Baloo_2, Dancing_Script } from "next/font/google";
+import { Geist_Mono, Space_Grotesk, Sora } from "next/font/google";
 import "./globals.css";
 import Cursor from "@/components/ui/Cursor";
 import { SITE_URL } from '@/lib/siteConfig';
 import { Analytics } from "@vercel/analytics/next";
 import profile from '@/data/profile.json';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
-const baloo = Baloo_2({
+const spaceGrotesk = Space_Grotesk({
   variable: "--font-baloo",
   subsets: ["latin"],
-  weight: ["400", "600", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const dancing = Dancing_Script({
-  variable: "--font-dancing",
+const sora = Sora({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const description = profile.description;
@@ -109,9 +104,9 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${baloo.variable} ${dancing.variable} h-full antialiased`}
+      className={`${sora.variable} ${geistMono.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
-      <body suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} ${baloo.variable} ${dancing.variable} h-full antialiased`}>
+      <body suppressHydrationWarning className={`${sora.variable} ${geistMono.variable} ${spaceGrotesk.variable} h-full antialiased`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
