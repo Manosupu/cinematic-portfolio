@@ -3,7 +3,12 @@
   top: 0;
   height: 100svh;
   z-index: 3;
-  background: #fff;
+  background: linear-gradient(
+    135deg,
+    var(--hero-start) 0%,
+    var(--hero-mid)   45%,
+    var(--hero-end)   100%
+  );
   display: grid;
   grid-template-columns: 30% 70%;
   overflow: hidden;
@@ -27,19 +32,35 @@
   max-height: 72vh;
 }
 
-/* Photo frame */
+/* Photo frame — no border/box, just the image */
 .photoFrame {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  border-radius: 6px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Fade photo edges into the purple background */
+.photoFrame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    linear-gradient(to bottom, var(--hero-start) 0%, transparent 20%),
+    linear-gradient(to top,    var(--hero-end)   0%, transparent 25%),
+    linear-gradient(to right,  var(--hero-mid)   0%, transparent 30%),
+    linear-gradient(to left,   var(--hero-end)   0%, transparent 15%);
+  pointer-events: none;
 }
 
 .photoImg {
   object-fit: cover;
   object-position: top center;
+  mix-blend-mode: luminosity;
+  opacity: 0.9;
 }
 
 /* Signature - overlaps bottom-right corner of photo */
@@ -57,6 +78,7 @@
   transform-origin: right bottom;
   pointer-events: none;
   z-index: 4;
+  text-shadow: 0 0 20px rgba(240, 192, 64, 0.4);
 }
 
 /* Social icons */
@@ -74,17 +96,21 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background: #f0f0f0;
-  color: #333;
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-primary);
   font-size: 1.2rem;
   text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
   transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .socialLink:hover {
   background: var(--accent);
-  color: #fff;
+  color: #000;
   transform: translateY(-3px) scale(1.12);
+  border-color: var(--accent);
+  box-shadow: 0 0 14px rgba(240, 192, 64, 0.45);
 }
 
 /* ── Right column ──────────────────────────── */
@@ -107,6 +133,7 @@
   color: var(--accent);
   margin: 0 0 0.6rem 0;
   flex-shrink: 0;
+  text-shadow: 0 0 12px rgba(240, 192, 64, 0.35);
 }
 
 /* Who I Am - infinite marquee */
@@ -156,13 +183,13 @@
   font-size: clamp(1rem, 1.6vw, 1.6rem);
   font-weight: 800;
   line-height: 1.42;
-  color: #111;
+  color: var(--text-primary);
   margin: 0;
   width: 100%;
 }
 
-.typed    { color: #111; }
-.untyped  { color: #c8c8c8; }
+.typed    { color: var(--text-primary); }
+.untyped  { color: rgba(26, 10, 46, 0.3); }
 
 /* Cursor lives as ::after on the last typed char - never a sibling node,
    so it cannot shift adjacent text or change line-wrap decisions. */

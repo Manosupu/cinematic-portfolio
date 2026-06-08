@@ -23,11 +23,25 @@
   height: 100%;
   width: 55%;
   z-index: 1;
+  /* Soft fade at the edges so it blends into the purple background */
+  mask-image: radial-gradient(
+    ellipse at center 40%, 
+    rgba(0, 0, 0, 1) 30%, 
+    rgba(0, 0, 0, 0.6) 60%, 
+    transparent 85%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse at center 40%, 
+    rgba(0, 0, 0, 1) 30%, 
+    rgba(0, 0, 0, 0.6) 60%, 
+    transparent 85%
+  );
 }
 
 .photoImg {
   object-fit: cover;
   object-position: center top;
+  opacity: 0.95;
 }
 
 /* ─── Social Sidebar ─────────────────────────────────────── */
